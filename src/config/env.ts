@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { z } from 'zod';
 
 const envSchema = z.object({
@@ -19,6 +20,7 @@ const envSchema = z.object({
   LOG_LEVEL: z.enum(['debug', 'info', 'warn', 'error']).default('info'),
 });
 
+// Safely access process.env with proper typing
 export const env = envSchema.parse(process.env);
 
 export type Env = z.infer<typeof envSchema>;

@@ -28,6 +28,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@auth/drizzle-adapter": "^1.10.0",
     "@hono/zod-validator": "^0.2.2",
     "@neondatabase/serverless": "^0.9.5",
     "dotenv": "^17.2.3",
@@ -41,6 +42,7 @@
     "@types/pg": "^8.15.5",
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.14.1",
+    "add": "^2.0.6",
     "drizzle-kit": "^0.31.5",
     "eslint": "^8.57.0",
     "tsx": "^4.20.6",
