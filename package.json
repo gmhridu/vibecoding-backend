@@ -1,0 +1,50 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Robust backend with HonoJS, Drizzle ORM, and NeonDB",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "hono",
+    "drizzle",
+    "neon",
+    "typescript",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hono/zod-validator": "^0.2.2",
+    "@neondatabase/serverless": "^0.9.5",
+    "dotenv": "^17.2.3",
+    "drizzle-orm": "^0.44.6",
+    "hono": "^4.4.8",
+    "pg": "^8.16.3",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.2",
+    "@types/pg": "^8.15.5",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.14.1",
+    "drizzle-kit": "^0.31.5",
+    "eslint": "^8.57.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.5.3",
+    "vitest": "^1.6.0"
+  }
+}
